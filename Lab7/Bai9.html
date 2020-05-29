@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = -4;
+		var sum1 = --a + a++ *2; 
+		document.writeln(sum1); 
+		var b = 9;
+		var sum2 = 10%b-- * b++ - 2 + --b % 2;
+		//sum2 %= b--* b++ - 2 + --b % 2;
+		document.writeln(sum2); 
+		var c = 4;
+		var d = c++;
+		var sum3 = c * d++ * 2 - c-- * d++;
+		document.writeln(sum3); 
+
+	</script>
+</body>
+</html>

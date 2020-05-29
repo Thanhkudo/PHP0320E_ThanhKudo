@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 400px; border: 1px solid #929292; padding-left: 20px; margin: 0px auto}
+		h2{text-align: center}
+		#dangpt{color: #002AFF}
+		#result, #error {color: #16B900}
+	</style>
+</head>
+<body>
+	<form action="#" method="post" id="form">
+		<div>
+			<h2>Giả phương trinh bậc hai <br>
+			a<sup>x</sup> + bx + c = 0</h2>
+			<p>Nhập vào hệ số a :</p>
+			<input type="text" id="txta" placeholder="Nhap 1 so" value=""><br><br>
+			<p>Nhập vào hệ số b :</p>
+			<input type="text" id="txtb" placeholder="Nhap 1 so" value=""><br><br>
+			<p>Nhập vào hệ số c :</p>
+			<input type="text" id="txtc" placeholder="Nhap 1 so" value=""><br><br>
+			<p>Phương trình bậc hai của bạn có dạng</p>
+			<p id="dangpt"></p>
+			<input type="submit" name="" value="Tìm x">
+			<p id="error"></p>
+			<p id="result"></p>
+
+		</div>
+	</form>
+	<script type="text/javascript">
+		document.getElementById('form').addEventListener('submit',function() {
+
+			// var txta = document.getElementById('txta').value;
+			// var txtb = document.getElementById('txtb').value;
+			var a = parseInt(document.getElementById('txta').value);
+			var b = parseInt(document.getElementById('txtb').value);
+			var c = parseInt(document.getElementById('txtc').value);
+			var dangpt= a+'x<sup>2</sup> + '+b+'x + '+c+' = 0';
+			var result = '';
+			var error='';
+			if (isNaN(a) || isNaN(b) || isNaN(c)) 
+				error='a, b và c phải là số!';
+			
+			else if (a == 0) {
+				if (b==0) {
+					if (c==0) {
+						result= 'Phương trình vô số nghiệm';
+						}	
+					else{
+						result= 'Phương trình vô nghiệm';
+					}
+				}
+				else{
+					result= 'x = '+(-c/b);
+				}
+			}
+			else{
+				var dt = b*b-4*a*c;
+				if(dt>0){
+					result='x1= '+(-b + Math.sqrt(dt)/2*a)+ '<br> x2=' +(-b - Math.sqrt(dt)/2*a);	
+				}
+				else if(dt<0){
+					result= 'Phương trình vô nghiệm';
+				}
+				else{				
+					result = 'x= '+(-b/2*a);
+				}
+			}	
+
+
+				
+			document.getElementById('dangpt').innerHTML=dangpt;
+			document.getElementById('error').innerHTML=error;
+			document.getElementById('result').innerHTML=result;
+		
+		event.preventDefault();
+
+		});
+	</script>
+</body>
+</html>

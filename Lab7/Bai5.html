@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 200px; border: 1px solid #929292; padding-left: 20px; margin: 0px auto}
+		#result {color: #16B900}
+		#error {color: #FF0000}
+
+	</style>
+</head>
+<body>
+	<form action="#" method="post" id="form">
+		<div>
+			<p>Nhập vào số a :</p>
+			<input type="text" id="txt" placeholder="Nhập vào số bất kỳ" value=""><br><br>
+			<input type="submit" name="" value="Kiểm tra">
+			<p id="error"></p>
+			<p id="result"></p>
+
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		document.getElementById('form').addEventListener('submit', function () {
+			var a = parseInt(document.getElementById('txt').value);
+			var result='';
+			var error='';
+			if(isNaN(a)){
+				error= "Vui lòng nhập số !";
+			}
+			if (a==1) {result= a+" là số nguyên tố";}
+			else{
+				var dem = 0;
+				for (var i=1; i <= a; i++){
+					if(a%i==0)
+						dem++;
+				}
+				if(dem==2){
+					result= a+" là số nguyên tố";
+				}
+				else{
+					result= a+" không là số nguyên tố";
+				}
+				
+			}
+	 		document.getElementById('error').innerHTML=error;
+			document.getElementById('result').innerHTML=result;
+		
+			event.preventDefault();
+
+		});
+	</script>
+</body>
+</html>
