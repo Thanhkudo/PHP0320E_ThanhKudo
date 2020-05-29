@@ -1,0 +1,46 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box; font: 15px tahoma;}
+
+	#khung{width: 80%; margin: 2em auto; border: 1px #2337AE solid}
+	#header{width: 100%;}
+	.xanh{background-color: #89F343}
+	.header-top-lienhe{width: 50%; float: left; color: #FFFFFF; height: 2em; font-weight: bold}
+	#lienhe{margin-left: 3em; text-align: left;line-height: 2em}
+	#dangnhap{text-align: right;margin-right: 3em;line-height: 2em}
+	#dangnhap a{color: #FFFFFF; text-decoration: none;}
+
+	#header-section{width: 100%}
+	.nav{background-color: #89F343;width: 100%; height: 45px;}
+	.menu{width: 60%;background-color: #89F343;float: left}
+	.menu ul{margin-left: 3em; height: 45px; width: 100%; }
+	.menu ul li{display: inline-block; list-style-type: none; text-align: center; width: 100px; line-height: 45px; background-color: #89F343}
+	.menu ul li a{text-decoration: none; display: block; color: #FFFFFF; font-weight: bold; font-size: 17px}
+	.menu a:hover{background-color: #ED981E;}
+	.menu a:active{color: #FF0000;}
+
+	.tk{ width: 40%;  float: right;background-color: #89F343;height: 45px}
+	.tk input[type=text]{padding: 6px; font-size: 15px;border-radius: 20px;}
+	.tk button{font-size: 17px;width: 40px; margin-top: 5px }
+	.tk p{text-align: right; margin-right: 3em}
+
+	.main{margin: 30px 60px;  }
+	.trai{width: 25%; border: 1px #808080 solid;border-radius: 10px;float: left}
+	 .trai h3{border-radius: 10px; background-color: #89F343; color:#FFFFFF ; padding: 5px;text-indent: 15px}
+	.trai p{border-radius: 10px; }
+	.trai a{text-decoration: none;display: block;padding: 10px;text-indent: 15px; font-weight: bold;color: #5A5A5A; border-radius: 20px; width: 80% }
+	.trai hr{width: 80%; margin: auto}
+	.trai a:hover{background-color: #ED981E;color: #FFFFFF}
+	.trai a:active{color: #FF0000}
+
+	.phải{width: 70%; float: right}
+	.clear{clear: both}
+
+	.sanpham h3{border-radius: 10px; background-color: #89F343; color:#FFFFFF ; padding: 5px;text-indent: 15px; margin-top: 20px; width: 24%}
+	.sanpham img{width: 23%; margin-top: 15px; margin-left: 10px;}
+
+	.tintuc{margin-top: 20px}
+	.tintuc hr{width: 95%; background-color:#ED981E;height:  2px ; margin-left: 12px;z-index: 1}
+	
+	.tintuc h3 {border-radius: 20px; background-color: #89F343; color:#FFFFFF ; padding: 5px;text-indent: 15px; width: 10%; margin: 15px auto; position: relative; z-index: 2;top: 32px}
+	.tintuc img {width: 31%; margin: 7px ; margin-top: 25px }
+	.content{width: 100%; background-color: #89F343; height: 150px;color: #FFFFFF}
+	.kaka{width: 25%;  display: inline-block; margin-left:  4em;text-indent: 50px;	margin-top: 20px; }
