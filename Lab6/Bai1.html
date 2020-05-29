@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css" media="screen">
+		
+		.header{margin: 2em auto; width: 20%;}
+		form{width: 100%}
+		label{width: 50px; display: inline-block}
+		#error{font: bold; color: red}
+		#result{font: bold; color: blue}
+		input[type=submit] {margin-left: 3em}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<form action=" " method="post" id="form">
+			<h2>Form Information</h2>
+			<label>Họ tên</label>
+			<input type="text" id="name" value="" placeholder="Nhập tân của bạn..."><br>
+			<label>Tuổi</label>
+			<input type="number" id="age" value="" placeholder="Nhập tuổi của bạn..."><br><br>
+			<input type="submit" name="" value="Hiển thị thông tin"><br>
+			<p id="result"></p>
+			<p id="error"></p>
+		</form>
+	</div>
+
+	<script>
+		var frm = document.getElementById('form');
+		console.log(frm);
+		frm.addEventListener('submit', function() {
+			var name = document.getElementById('name').value;
+			var age = document.getElementById('age').value;
+			var error= '';
+			var result= '';
+			if (name==""|| age=='' ) {
+
+				error='Tên hoặc Tuổi k được để trống!!!';
+			}
+			else{
+				result+="Tên vừa nhập: "+name+'<br>';
+				result+="Tuổi vừa nhập: "+age;
+			}
+			document.getElementById('error').innerHTML=error;
+			
+			document.getElementById('result').innerHTML=result;
+		
+			event.preventDefault();
+			
+		});
+	</script>
+</body>
+</html>

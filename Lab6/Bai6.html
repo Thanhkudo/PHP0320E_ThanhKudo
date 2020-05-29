@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" method="post">
+		Nhập tên: <input type="text" name="" value="" placeholder="" id="txt">
+	</form>
+	<script>
+		var txt = document.getElementById('txt').addEventListener('keyup',function() {
+			var text = document.getElementById('txt').value;
+			alert('Chuỗi bạn nhập là: '+text);
+		})
+	</script>
+</body>
+</html>

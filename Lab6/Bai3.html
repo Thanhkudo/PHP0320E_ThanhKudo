@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		*{margin: 0px; padding: 0px; box-sizing: border-box; font: 20px tahoma;}
+		#header{width: 30%; margin: 2em auto; border: 1px solid #838080;}
+		#header_top{width: 100%;height: 50px; text-align: center; background-color: #D1CFCF; }
+		h3{line-height: 50px}
+		#header_content{width: 90%; padding: 20px;margin: 0px auto}
+		input{width: 100%; border-radius: 5px;}
+	</style>
+</head>
+<body>
+	<form action="" method="post" id="form">
+	<div id="header">
+		<div id="header_top">
+			<h3>Javascript Onsubmit Event Example</h3>
+		</div>
+		<div id="header_content">
+			<p>Name:</p>
+			<input type="text" name="" id="name" value="" placeholder="">
+			<p>Email:</p>
+			<input type="email" id="email" name="" value="" placeholder="">
+			<p>Contact No:</p>
+			<input type="tel" name="" id="tell" value="" placeholder=""><br><br>
+			<input type="submit" name="" value="Submit"><br><br>
+			<p id="result"></p>
+			<p id="error"></p>
+		</div>
+	</div>
+	</form>
+	<script>
+		document.getElementById('form').addEventListener('submit',function() {
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var tell = document.getElementById('tell').value;
+			var result='';
+			var error='';
+
+			if (name==''||email=='' ||tell=='') {
+				error='Mời nhập đủ thông tin!!!';
+			}
+			else if(isNaN(tell)){
+				error='Contact phải là số!!!';
+			}
+			else{
+				result="Name: "+name+"<br />Email: "+email+"<br />Contact No: "+tell;
+			}
+			
+			document.getElementById('result').innerHTML=result;
+			document.getElementById('error').innerHTML=error;
+			event.preventDefault();
+
+		})
+	</script>
+</body>
+</html>

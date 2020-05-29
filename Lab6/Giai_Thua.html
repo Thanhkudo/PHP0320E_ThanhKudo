@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prompt</title>
+	<script type="text/javascript">
+		
+		var a = parseInt(prompt('Nhap so can tinh giai thua','0'));
+		var s=1;	
+		function tinh(a) {
+			for (var i=1;i<=a;i++){
+					s = s * i;	
+				}
+			return s;	
+		}			
+			
+			if(!isNaN(a)==true){
+				tinh(a);
+				document.write("<h3>Luy thua so vua nhap la:" +s+ "</h3>");	
+			}
+			else{
+				b = confirm('Hay chac chan la ban nhap so !');
+				if(b ==true){
+					
+				}
+				
+			}
+	</script>
+	
+	<style type="text/css">
+		h3{text-align: center; font: 30px tahoma; color: #CB62CA; margin-top: 100px}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

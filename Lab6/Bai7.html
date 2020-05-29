@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" method="post" id="form">
+		Chọn quốc gia: 
+		<select id="work" onchange="myfun()">
+			<option value="Việt Nam">Việt Nam</option>
+			<option value="Nhật Bản">Nhật Bản</option>
+			<option value="Hàn Quốc">Hàn Quốc</option>
+		</select>
+	</form>
+	<script>
+		// function myfun() {
+		// 	var work = document.getElementById('work').value
+		// 	var result = 'Bạn vừa chọn quốc gia: '
+		// 	var lc = parseInt(work);
+  //           switch (lc) {
+  //               case 1:
+  //                   alert(result+'Việt Nam')
+  //                   break;
+  //               case 2:
+  //                   alert(result+'Nhật Bản')
+  //                   break;
+  //               case 3:
+  //                   alert(result+'Hàn Quốc')
+  //                   break;
+  //           }
+		// }
+		document.getElementById('form').addEventListener('change',function () {
+			alert('Bạn chọn quốc gia: '+document.getElementById('work').value);
+			
+		})	
+	
+		
+	</script>
+</body>
+</html>

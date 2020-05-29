@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pt Bac II</title>
+	<script type="text/javascript">
+		var a = parseFloat(prompt('Nhap A:',''));
+		var b = parseFloat(prompt('Nhap B:',''));
+		var c = parseFloat(prompt('Nhap C:',''));
+		if (a=='0') {
+			if(b=='0'){
+				if(c=='0'){
+					alert('Phuong trinh vo so nghiem')
+				}
+				else{
+					alert('Phuong trinh vo nghiem')
+				}
+			}
+			else{
+				alert('Phương trinh co nghiem: '+-c/b);
+			}
+		}
+		else{
+			var dt = b*b-4*a*c;
+			if(dt>0){
+				alert('Phương trinh co hai nghiem: \n x1= '+(-b + Math.sqrt(dt)/2*a)+ '\n x2=' +(-b - Math.sqrt(dt)/2*a));	
+			}
+			else if(dt<0){
+				alert('Phuong trinh vo nghiem')
+			}
+			else{				
+				alert('Phuong trinh co 1 nghiem: \n x= '+(-b/2*a));
+			}
+		}
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		button{padding: 10px; background-color: red; margin-left:50px ; color: #FFFFFF}
+	</style>
+</head>
+<body>
+	<!-- <form action="#" method="post" id="frm"> -->
+	<!-- <button>Menu 1</button> -->
+	<button id="menu">Menu 2</button>
+	<!-- <button>Menu 3</button> -->
+	<!-- </form> -->
+	<script type="text/javascript">
+		 var menu = document.getElementById('menu');
+		 console.log('menu');
+		 menu.addEventListener('mousemove',function() {
+		 	document.getElementById('menu').style='background-color: blue';
+		 
+		 });
+		 menu.addEventListener('mouseout',function() {
+		 	document.getElementById('menu').style='background-color: red';
+		 
+		 });
+		 
+	</script>
+</body>
+</html>
