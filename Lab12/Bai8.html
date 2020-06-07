@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 1 2 3 4 5 6 </title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
+	<style type="text/css">
+		.container{width: 30%; margin-top: 50px}
+		.red{color: red}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<form id="form" method="post" action="">
+		<p style="border-bottom: 1px solid #ADACAC">Form validate</p>
+    	<div class="form-group">
+    		<label for="name" >Name *</label>
+   			<input type="text" class="form-control" id="name" name="name"  placeholder=" Name">
+  		</div>
+  		<div class="form-group">
+    		<label for="name" >Mobile</label>
+   			<input type="text" class="form-control" id="mobile" name="mobile"  placeholder="Mobile">
+  		</div>
+  		<div class="form-group">
+    		<label for="name" >Email</label>
+   			<input type="email" class="form-control" id="email" name="email"  placeholder="Email">
+  		</div>
+    <div class="form-group">
+        <label for="name" >Code</label>
+        <input type="text" class="form-control" id="code" name="code"  placeholder="Code">
+      </div>
+      <div class="form-group">
+        <label for="name" >Min Length</label>
+        <input type="text" class="form-control" id="min" name="min"  placeholder="Code">
+      </div>
+      <div class="form-group">
+        <label for="name" >Number</label>
+        <input type="number" class="form-control" id="number" name="number"  placeholder="Number">
+      </div>
+      <div class="form-group">
+        <label for="name" >Website</label>
+        <input type="url" class="form-control" id="website" name="website"  placeholder="Url">
+      </div>
+    	<button type="submit" class="btn btn-primary">Create User</button>
+	</form>
+	</div>
+	
+	<script>
+        $(document).ready(function(){
+            var validate = {
+                errorPlacement: function(error, element){
+                    error.insertAfter(element);
+                    error.wrap("<p class='red'>");
+                },
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    mobile:{
+                    	required: true,
+                      number: true
+                    },
+                    email:{
+                      required: true
+                    },
+                    code:{
+                      required: true,
+                      min: 11
+                    },
+                    min:{
+                      required: true,
+                      min: 3
+                    },
+                    number:{
+                      required: true,
+                      number: true
+                    },
+                    website:{
+                      required: true
+                    },
+                },
+                messages: {
+                    name: {
+                        required: "Please Enter Name"
+                    },
+                    mobile: {
+                        required: "Please Enter Mobile",
+                        number: "Please Enter Number"
+                    },
+                    email: {
+                        required: "Please Enter Email"
+                    },
+                    code: {
+                        required: "Please Enter Code",
+                        min: "Please Enter 11 Digit code"
+                    },
+                    min: {
+                        required: "Please Enter Min Length",
+                        min: "Please Enter Minimun 3 Digit"
+                    },
+                    number: {
+                        required: "Please Enter Number",
+                        number: "Please Enter Number"
+                    },
+                    website: {
+                        required: "Please Enter Website"
+                    },
+                }
+            };
+            $('#form').validate(validate);
+        })
+    </script>
+</body>
+</html>
