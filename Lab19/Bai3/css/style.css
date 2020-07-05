@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+.frame-notot{
+	background: #262626;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header-content{
+	background: #2a2a2a;
+}
+.content-top{
+	
+	background: #f8f8f8;
+	margin: 0;
+	padding: 0;
+}
+.content-bottom{
+	background: #fff;
+}
+.footer .top{
+	background: #313131;
+}
+.footer .bottom{
+	background: #2c2c2c;
+}
